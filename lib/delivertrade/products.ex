@@ -37,6 +37,8 @@ defmodule Delivertrade.Products do
   """
   def get_product!(id), do: Repo.get!(Product, id)
 
+  def get_product_with_variants!(id), do: Repo.get!(Product, id) |> Repo.preload(:variants)
+
   @doc """
   Creates a product.
 

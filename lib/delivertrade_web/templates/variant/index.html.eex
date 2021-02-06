@@ -1,0 +1,29 @@
+<h1><%= @product.name %> Variants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>SKU</th>
+      <th>Price</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= for variant <- @variants do %>
+      <tr>
+        <td>
+          <%= variant.sku %>
+        </td>
+        <td>
+          <%= variant.price %>
+        </td>
+        <td>
+        </td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
+
+<span>
+  <%= link "New Variant" , to: Routes.variant_path(@conn, :new, @product) %>
+</span>

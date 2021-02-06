@@ -44,7 +44,9 @@ defmodule Delivertrade.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:credo, "~> 1.4", only: [:dev, :test], runtime: false},
+       {:ecto_psql_extras, "~> 0.2"}
     ]
   end
 

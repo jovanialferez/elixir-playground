@@ -17,6 +17,12 @@ defmodule DelivertradeWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+
+    resources "/products", ProductController
+
+    get "/products/:id/variants", VariantController, :index
+    get "/products/:id/variants/new", VariantController, :new
+    post "/products/:id/variants", VariantController, :create
   end
 
   # Other scopes may use custom stacks.
@@ -36,7 +42,7 @@ defmodule DelivertradeWeb.Router do
 
     scope "/" do
       pipe_through :browser
-      live_dashboard "/dashboard", metrics: DelivertradeWeb.Telemetry
+      live_dashboard "/dashboard", metrics: DelivertradeWeb.Telemetry, ecto_repos: [Delivertrade.Repo]
     end
   end
 end

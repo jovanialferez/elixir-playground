@@ -34,7 +34,20 @@ defmodule Delivertrade.Products.Variant do
   @doc false
   def changeset(variant, attrs) do
     variant
-    |> cast(attrs, [:sku, :price])
+    |> cast(attrs, [
+      :sku,
+      :price,
+      :size,
+      :size_label,
+      :color,
+      :color_label,
+      :length,
+      :length_label,
+      :weight,
+      :weight_label,
+      :package_size,
+      :package_size_label
+    ])
     |> validate_required([:sku, :price])
     |> unique_constraint(:sku)
   end
