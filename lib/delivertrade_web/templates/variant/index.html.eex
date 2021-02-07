@@ -5,6 +5,8 @@
     <tr>
       <th>SKU</th>
       <th>Price</th>
+      <th>Size</th>
+      <th>Color</th>
       <th></th>
     </tr>
   </thead>
@@ -16,6 +18,12 @@
         </td>
         <td>
           <%= variant.price %>
+        </td>
+        <td>
+          <%= variant.size_label %>
+        </td>
+        <td>
+          <%= variant.color_label %>
         </td>
         <td>
         </td>

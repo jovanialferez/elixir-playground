@@ -13,6 +13,46 @@
   <%= text_input f, :price %>
   <%= error_tag f, :price %>
 
+  <%= label f, :size %>
+  <%= text_input f, :size %>
+  <%= error_tag f, :size %>
+
+  <%= label f, :size_label %>
+  <%= text_input f, :size_label %>
+  <%= error_tag f, :size_label %>
+
+  <%= label f, :color %>
+  <%= text_input f, :color %>
+  <%= error_tag f, :color %>
+
+  <%= label f, :color_label %>
+  <%= text_input f, :color_label %>
+  <%= error_tag f, :color_label %>
+
+  <%= label f, :length %>
+  <%= text_input f, :length %>
+  <%= error_tag f, :length %>
+
+  <%= label f, :length_label %>
+  <%= text_input f, :length_label %>
+  <%= error_tag f, :length_label %>
+
+  <%= label f, :weight %>
+  <%= text_input f, :weight %>
+  <%= error_tag f, :weight %>
+
+  <%= label f, :weight_label %>
+  <%= text_input f, :weight_label %>
+  <%= error_tag f, :weight_label %>
+
+  <%= label f, :package_size %>
+  <%= text_input f, :package_size %>
+  <%= error_tag f, :package_size %>
+
+  <%= label f, :package_size_label %>
+  <%= text_input f, :package_size_label %>
+  <%= error_tag f, :package_size_label %>
+
   <div>
     <%= submit "Save" %>
   </div>
